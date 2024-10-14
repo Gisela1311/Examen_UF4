@@ -56,6 +56,7 @@ class Libro:
             return
         print(f"No existe la categoria: {tipo}")
 
+   
     
     def busca_receta(self, nombre):
         '''
