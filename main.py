@@ -37,11 +37,11 @@ Recetas_abuela.guarda_receta(receta_10)
 Recetas_abuela.guarda_receta(receta_11)
 Recetas_abuela.guarda_receta(receta_12)
 
-
 Recetas_abuela.listar()
+
 print(Recetas_abuela.busca_receta("Macedonia primavera"))
 print(Recetas_abuela)
-print(Recetas_abuela.lista_recetas_por_tipo("postre"))
+Recetas_abuela.lista_recetas_por_tipo("postra")
 
 
 

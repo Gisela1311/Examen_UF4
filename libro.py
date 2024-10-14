@@ -18,7 +18,7 @@ class Libro:
         cadena = self.nombre + '\n'
         cadena += "Creado: " + self.fecha_creacion + '\n'
         cadena += "Actualizado: " + self.fecha_actualización + '\n'
-        cadena += "Este libro tiene " + str(len(self.recetas)) + " recetas"
+        cadena += "Este libro tiene " + str(len(self.recetas["entrante"])+len(self.recetas["principal"])+ len(self.recetas["postre"])) + " recetas"
 
         return cadena
     
@@ -36,7 +36,6 @@ class Libro:
             self.recetas[receta.tipo].append(receta)
             self.fecha_actualización = datetime.now().strftime("%d/%m/%y  %H:%M:%S.%f")
 
-    
     def listar(self):
         '''
         Método para listar todas las recetas del libro. No distingue por ningún valor
@@ -45,6 +44,7 @@ class Libro:
             for receta in listareceta:
                 print(receta)
     
+
     def lista_recetas_por_tipo(self, tipo):
         '''
         Método para listar las recetas del libro por tipo de receta
@@ -53,7 +53,7 @@ class Libro:
             if tiporecetas == tipo:
                 for receta in listareceta:
                     print (receta)
-            return
+                return
         print(f"No existe la categoria: {tipo}")
 
    
