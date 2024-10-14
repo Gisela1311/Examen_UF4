@@ -15,18 +15,17 @@ class Receta:
         ''' 
         Hacemos una cadena para unir los elementos y que se printean con saltos de linia
         '''
-        cadena = "Nombre de la receta: " + self.nombre +'\n'
-        cadena += "Nivel de dificultad: " + str(self.dificultad) +'\n'
-        #cadena += f"Lista de ingredientes:  {self.ingredientes}" + '\n'
-        cadena += f"Lista de ingredientes:  "
+        cadena = "Nombre       = " + self.nombre +'\n'
+        cadena += "Tipo         = " + self.tipo + '\n'
+        cadena += "Dificultad   = " + str(self.dificultad) +'\n'
+        cadena += "Tiempo       = " + str(self.tiempo) + " minutos" + '\n'
+        cadena += "Elaboración  = " + self.elaboracion + '\n'
+        cadena += f"Ingredientes =  "
         for ingre in self.ingredientes[:-1]:
             cadena += ingre +", "
         cadena += self.ingredientes[-1] +".\n"
-        cadena += "Descripción de la preparación: " + self.elaboracion + '\n'
-        cadena += "Tipo de receta: " + self.tipo + '\n'
-        cadena += "El tiempo de preparación es de: " + str(self.tiempo) + " minutos"
-        cadena += "\n-----------------------------------------------------------------"
-        
+                
         return cadena
+ 
 
 
